@@ -11,7 +11,7 @@ module EmberCli
     end
 
     def html_request?(request)
-      request.format.html?
+      request.format.html? || request.format.to_s == "*/*"
     end
   end
 end
